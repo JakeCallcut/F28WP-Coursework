@@ -1,0 +1,8 @@
+:root {
+  --background: #c2c8c5;
+  --logoColor: #4a707a;
+}
+
+body {
+  background-color: --background;
+}

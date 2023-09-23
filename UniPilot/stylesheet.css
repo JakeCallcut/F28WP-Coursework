@@ -1,8 +1,31 @@
 :root {
   --background: #c2c8c5;
   --logoColor: #4a707a;
+  --fonts: Montserrat, Helvetica;
 }
 
+
+/*LOGIN PAGE*/
 body {
-  background-color: --background;
+  background-color: var(--background);
+  font-family: var(--fonts);
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#slogan {
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.loginPane {
+  text-align: center;
+}
+
+.loginPane img {
+  padding: 10% 0 0 0;
 }

@@ -67,6 +67,15 @@ img {
   box-shadow: 0 0 5px rgba(52, 152, 219, 0.7);
 }
 
+#showPass {
+  width: 25px;
+  height: 25px;
+  padding: 0 0 0 0;
+}
+
+#showPass:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
 
 /*HOMEPAGE*/
 .sidebar {

@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  let createMode = false;
   const users = [
   { email: 'jakecallcut@gmail.com', password: 'guinness' },
-  { email: 'johnsnow@outlook.com', password: 'guinness' },
-  { email: 'jakecallcut', password: 'guinness' }
+  { email: 'johnsnow@outlook.com', password: 'gameofthrones' },
+  { email: 'johnnywilson@gmail.com', password: 'Password123' }
   ];
 
     const submit = document.getElementById('submitButton');
@@ -21,9 +22,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const create = document.getElementById('createButton');
     create.addEventListener('click', function() {
-      
+      if (createMode) {
+
+      }
+      else {
+        event.preventDefault();
+        submit.style.display = 'none';
+        const mySlogan = document.getElementById('slogan');
+        mySlogan.textContent = "Create Account";
+        createMode = true;
+      }
     });
 
+    const passwordInput = document.getElementById('passwordInput');
+    const showPassword = document.getElementById('showPass');
+    showPassword.addEventListener('click', function() {
+      if (passwordInput.type === 'password') {
+        showPassword.src = 'images/eyeOpen.png';
+        passwordInput.type = 'text';
+      }
+      else {
+        showPassword.src = 'images/eyeClosed.png';
+        passwordInput.type = 'password';
+      }
+    });
 
     function checkInput(_email, _password){
       var emailFound = false;

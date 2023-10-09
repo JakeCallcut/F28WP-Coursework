@@ -34,8 +34,8 @@ img {
   padding: 5% 0 0 0;
 }
 
-.loginButton{
-  margin: 0.25% 0 0.25% 0;
+.loginButton {
+  margin: 0.4% 0 0 0;
   padding: 5px 5px 5px 5px;
   background-color: var(--accent);
   color: #fff;
@@ -46,14 +46,26 @@ img {
   transition: background-color 0.3s ease;
 }
 
-.loginButton:hover{
+.loginButton:hover {
   background-color: var(--logoColor);
 }
 
 .input {
-  
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
 }
 
+.input:hover {
+  border-color: var(--logoColor);
+}
+
+.input:focus {
+  border-color: var(--logoColor); /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.7);
+}
 
 
 /*HOMEPAGE*/

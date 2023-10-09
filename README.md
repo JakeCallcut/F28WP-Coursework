@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/JakeCallcut/UniPilot/blob/main/UniPilot/images/loginSS.png" width=400 style="margin-bottom:-25px"><br>
+    <img src="https://github.com/JakeCallcut/UniPilot/blob/main/UniPilot/Images/logo.png" width=400 style="margin-bottom:-25px"><br>
     <img src="https://img.shields.io/badge/Scripting-JavaScript-yellow"  style="margin-right: 5px">
     <img src="https://img.shields.io/badge/Language-HTML5-orange" style="margin-right: 5px">
     <img src="https://img.shields.io/badge/Styling-CSS-blue"  style="margin-right:-5px"><br>

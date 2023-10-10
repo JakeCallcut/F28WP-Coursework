@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-
   let createMode = false;
 
   const submit = document.getElementById('submitButton');
   submit.addEventListener('click', function() {
-    const email = document.getElementById('emailInput').value;
+    const username = document.getElementById('emailInput').value;
     const password = document.getElementById('passwordInput').value;
 
-    if (checkInput(email, password)) {
+    if (getUser(username, password)) {
         window.location.replace('index.html');
     }
     else {
@@ -15,11 +14,45 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  function getUser(username, password) {
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const user = users.find((user) => user.username === username);
+
+    if (user && user.password === password) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function addUser(username, password){
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const userExists = users.some((user) => user.username === username);
+
+    if (userExists) {
+      return false;
+    }
+
+    users.push({ username, password });
+    localStorage.setItem('users', JSON.stringify(users));
+    return true;
+  }
+
   const create = document.getElementById('createButton');
   create.addEventListener('click', function() {
+    const status = document.getElementById('status');
     if (createMode) {
       create.addEventListener('click', function(){
-          users.push()
+        const username = document.getElementById('emailInput').value;
+        const password = document.getElementById('passwordInput').value;
+
+        if (addUser(username, password)) {
+          alert('Account successfully created')
+          window.location.replace('index.html');
+        }
+        else {
+          status.textContent = 'This username already exists';
+        }
       });
     }
     else {
@@ -31,9 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  const passwordInput = document.getElementById('passwordInput');
   const showPassword = document.getElementById('showPass');
   showPassword.addEventListener('click', function() {
+    const passwordInput = document.getElementById('passwordInput');
     if (passwordInput.type === 'password') {
       showPassword.src = 'images/eyeOpen.png';
       passwordInput.type = 'text';
@@ -43,32 +76,5 @@ document.addEventListener('DOMContentLoaded', function() {
       passwordInput.type = 'password';
     }
   });
-
-  function checkInput(_email, _password){
-    var emailFound = false;
-    var passwordFound = false;
-
-    for (var user of users) {
-      if (user.email === _email) {
-        emailFound = true;
-      }
-      if (user.password === _password) {
-        passwordFound = true;
-      }
-    }
-
-    if (emailFound && passwordFound) {
-      return true;
-    }
-    return false;
-  }
-
-  function getUser(username) {
-
-  }
-
-  function addUser(username, password){
-
-  }
 
 });

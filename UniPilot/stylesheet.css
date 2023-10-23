@@ -107,6 +107,7 @@ img {
 }
 
 .topper{
+  margin-left: 35%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -114,7 +115,6 @@ img {
 
 .classCharts{
   display: flex;
-
   grid-row: 1;
 }
 
@@ -149,5 +149,5 @@ img {
 }
 
 .classNames p{
-  margin: 50px 30px 0 30px;
+  margin: 20px 50px 0 55px;
 }

@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const users = JSON.parse(localStorage.getItem('users')) || [];
     const user = users.find((user) => user.username === username);
 
+    alert
+
     if (user && user.password === password) {
       return true;
     } else {
@@ -42,18 +44,20 @@ document.addEventListener('DOMContentLoaded', function() {
   create.addEventListener('click', function() {
     const status = document.getElementById('status');
     if (createMode) {
-      create.addEventListener('click', function(){
         const username = document.getElementById('emailInput').value;
         const password = document.getElementById('passwordInput').value;
 
         if (addUser(username, password)) {
-          alert('Account successfully created')
+          alert('Account successfully created');
+          const localStorageData = JSON.stringify(localStorage);
+          alert(localStorageData);
           window.location.replace('index.html');
         }
         else {
           status.textContent = 'This username already exists';
         }
-      });
+        createMode = false;
+        alert(localStorage.getItem(users));
     }
     else {
       event.preventDefault();

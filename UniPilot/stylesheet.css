@@ -84,6 +84,8 @@ img {
   height: 100%;
   text-align: center;
   float: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar li {
@@ -91,6 +93,7 @@ img {
   list-style: none;
   text-decoration: none;
   float: left;
+  padding-right: 100px;
 }
 
 .sidebar li:hover {

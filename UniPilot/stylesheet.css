@@ -154,3 +154,12 @@ img {
 .classNames p{
   margin: 20px 50px 0 55px;
 }
+
+#blocks{
+  display: flex;
+  justify-content: center;
+}
+
+#blocks div{
+  padding: 0 100px 0 0;
+}

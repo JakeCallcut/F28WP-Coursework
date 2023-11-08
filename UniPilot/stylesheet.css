@@ -163,3 +163,16 @@ img {
 #blocks div{
   padding: 0 100px 0 0;
 }
+
+#blocks h3{
+  color: var(--logoColor);
+}
+
+#blocks span {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+#blocks p {
+  font-size: 0.7rem;
+}
